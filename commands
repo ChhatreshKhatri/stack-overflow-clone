@@ -1,0 +1,5 @@
+client ->
+npm i axios jwt-decode moment react-copy-to-clipboard react-router-dom redux react-redux redux-thunk
+
+server->
+npm i bcryptjs jsonwebtoken cors dotenv express mongoose nodemon
