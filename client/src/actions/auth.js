@@ -9,6 +9,8 @@ export const signup = (authData, navigate) => async (dispatch) => {
         navigate('/')
     } catch (error) {
         console.log(error)
+        // alert error message
+        alert(error.response.data.message)
     }
 }
 
@@ -20,5 +22,7 @@ export const login = (authData, navigate) => async (dispatch) => {
         navigate('/')
     } catch (error) {
         console.log(error)
+        // alert error message
+        alert(error.response.data.message)
     }
 }

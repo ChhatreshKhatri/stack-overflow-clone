@@ -37,19 +37,16 @@
     background-color: #fdf7e2;
     border-bottom: solid 1px #edeff0;
 }
-@media (max-width:768px) {
-    .display-question-container{
-        width: 550px;
-    }
-    .main-bar{
-        width: 300px;
-    }
-}
 
-.display-question-container .display-votes-ans{
+
+.display-votes-ans{
+    display: flex;
     padding: 20px;
 }
-.display-question-container .display-votes-ans p{
+.display-votes-no, .display-ans-no{
+    padding: 10px;
+}
+.display-votes-ans p{
     margin: 0%;
     text-align: center;
 }
@@ -95,4 +92,19 @@
 }
 .display-tags-time .display-time {
     font-size: 13px;
+}
+
+@media (max-width:1024px) {
+    .display-votes-ans{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .display-ans-no, .display-votes-no {
+        padding: 2px;
+        border: 1px solid #edeff0;
+    }
+    .main-bar{
+        width: calc( 100%  );
+    }
 }

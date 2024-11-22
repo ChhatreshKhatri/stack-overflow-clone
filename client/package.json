@@ -6,12 +6,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
-    "@kommunicate/kommunicate-chatbot-plugin": "^0.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.2",
-    "dotenv": "^16.0.3",
     "gh-pages": "^5.0.0",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.4",
@@ -22,7 +20,6 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
-    "react-thunk": "^1.0.0",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
@@ -52,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
   }
 }

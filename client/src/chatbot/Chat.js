@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 export class Chat extends Component {
   componentDidMount() {
-    const config = require("../hide.json");
-    const appID = config.appID;
+    // const config = require("../hide.json");
+    // const appID = config.appID;
     (function (d, m) {
       var kommunicateSettings = {
-        appId: appID,
+        appId: process.env.REACT_APP_APP_ID,
         popupWidget: true,
         automaticChatOpenOnNavigation: true,
       };
@@ -21,7 +21,7 @@ export class Chat extends Component {
     })(document, window.kommunicate || {});
   }
   render() {
-    return <div></div>;
+    return <></>;
   }
 }
 

@@ -47,32 +47,15 @@ const QuestionsDetails = () => {
     //         answeredOn: "jan 2",
     //         userId: 2,
     //     }]
-    // },{ 
-    //     _id: '3',
-    //     upVotes: 3,
-    //     downVotes: 2,
-    //     noOfAnswers: 0,
-    //     questionTitle: "What is a function?",
-    //     questionBody: "It meant to be",
-    //     questionTags: ["javascript", "R", "python"],
-    //     userPosted: "mano",
-    //     askedOn: "jan 1",
-    //     userId: 1,
-    //     answer: [{
-    //         answerBody: "Answer",
-    //         userAnswered: 'kumar',
-    //         answeredOn: "jan 2",
-    //         userId: 2,
-    //     }]
+    // }
     // }]
     const [Answer, setAnswer] = useState('')
     const Navigate = useNavigate()
     const dispatch = useDispatch()
     const User = useSelector((state) => (state.currentUserReducer))
     const location = useLocation()
+    const url=process.env.REACT_APP_APP_URL
     // const url = 'http://localhost:3000'
-    const config = require('../../hide.json');
-    const url = config.BASE_URL;
 
     const handlePostAns = (e, answerLength) =>{
         e.preventDefault()
@@ -84,6 +67,8 @@ const QuestionsDetails = () => {
                 alert('Enter an answer before submitting')
             } else{
                 dispatch(postAnswer({ id, noOfAnswers: answerLength + 1, answerBody: Answer, userAnswered: User.result.name }))
+                setAnswer('')
+                window.location.reload()
             }
         }
     }
