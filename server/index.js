@@ -19,12 +19,12 @@ app.use(express.urlencoded({limit: "30mb", extended: true}))
 app.use(cors());
 
 
-app.get('/api',(req, res) => {
+app.get('/',(req, res) => {
     res.send("This is a stack overflow clone API")
 })
-app.use('/api/user', userRoutes)
-app.use('/api/questions', questionRoutes)
-app.use('/api/answer', answerRoutes)
+app.use('/user', userRoutes)
+app.use('/questions', questionRoutes)
+app.use('/answer', answerRoutes)
 
 const PORT = process.env.PORT || 5000
 const DATABASE_URL = process.env.DATABASE_URL
